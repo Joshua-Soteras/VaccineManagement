@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\csula.labs.HW2.props" />
+</Project>

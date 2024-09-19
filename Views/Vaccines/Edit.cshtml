@@ -1,0 +1,66 @@
+﻿@model Vaccine 
+ 
+<h1> Edit Vaccine </h1>
+<table class="table">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Doses Required</th>
+        <th>Doses In Between</th>
+        <th>Doses Recieved</th>
+        <th>Total Doses Left </th>
+        
+    </tr>
+</thead>
+
+<tbody>
+    
+    {
+        <tr>
+            <td>@Model.Id</td>
+
+            <td>@Model.Name</td>
+            
+            <td>@Model.DosesRequired</td>
+            
+            <td>@Model.DosesInBetween</td>
+            
+            <td>@Model.DosesRecieved</td>
+            
+            <td>@Model.TotalDosesLeft</td>
+            
+        </tr>
+    }
+</tbody>
+</table>
+
+<form method = "post">
+
+    <div class="form-group">
+        <label for="Name"> Vaccine Name</label>
+        <input type = "text" class="form-control" id="Name" name="Name" value="@Model.Name"/>
+    </div>
+
+    <div class="form-group">
+        <label for="DosesRequired"> Doses Required </label>
+        <input type="number" class="form-control" id="DosesRequired" name="DosesRequired" value="@Model.DosesRequired" />
+    </div>
+
+    <div class="form-group">
+        <label for="DosesInBetween"> Doses In Between </label>
+        <input type="number" class="form-control" id="DosesInBetween" name="DosesInBetween" value="@Model.DosesInBetween" />
+    </div>
+
+    <div class="form-group">
+        <label for="DosesRecieved"> Doses Recieved</label>
+        <input type="number" class="form-control" id="DosesRecieved" name="DosesRecieved" value="@Model.DosesRecieved" />
+    </div>
+
+    <div class="form-group">
+        <label for="TotalDosesLeft">Total Doses Left</label>
+        <input type="number" class="form-control" id="TotalDosesLeft" name="TotalDosesLeft" value="@Model.TotalDosesLeft" />
+    </div>
+
+    <button type ="submit" class= "btn btn-primary"> Change  </button>
+</form>

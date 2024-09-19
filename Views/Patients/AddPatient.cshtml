@@ -1,0 +1,24 @@
+﻿@model Patient
+
+
+<a class="btn btn-primary" asp-area="" asp-controller="Patients" asp-action="PatientsIndex">
+    Back to Patients Index
+</a>
+
+<h1>New Patient Form</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="VaccineCompanyId"> Vaccine </label>
+        <select asp-for="VaccineCompanyId" asp-items="ViewBag.Vaccines"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PatientName"> Name of Patient</label>
+        <input asp-for="PatientName" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary"> Save </button>
+
+</form>
